@@ -7,7 +7,27 @@
 <body>
 <a style="display: none;" href="" id="vurl" rel="noreferrer"></a>
 <script>
-    var _0x3fb4=['split','length','getElementById','vurl','href','click','url','location','search','substring'];(function(_0x29fa5e,_0x214778){var _0x5816b6=function(_0x536065){while(--_0x536065){_0x29fa5e['push'](_0x29fa5e['shift']());}};_0x5816b6(++_0x214778);}(_0x3fb4,0x151));var _0x104b=function(_0x3b647b,_0x2c081d){_0x3b647b=_0x3b647b-0x0;var _0x28ddd2=_0x3fb4[_0x3b647b];return _0x28ddd2;};function getQueryVariable(_0x589613){var _0xe9257=window[_0x104b('0x0')][_0x104b('0x1')][_0x104b('0x2')](0x1);var _0x1688f2=_0xe9257[_0x104b('0x3')]('&');for(var _0x3d25cf=0x0;_0x3d25cf<_0x1688f2[_0x104b('0x4')];_0x3d25cf++){var _0x18d3cb=_0x1688f2[_0x3d25cf][_0x104b('0x3')]('=');if(_0x18d3cb[0x0]==_0x589613){return _0x18d3cb[0x1];}}return![];}function open_url(_0x27352a){document[_0x104b('0x5')](_0x104b('0x6'))[_0x104b('0x7')]=_0x27352a;document[_0x104b('0x5')](_0x104b('0x6'))[_0x104b('0x8')]();}var url=getQueryVariable(_0x104b('0x9'));open_url(url);
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = unescape(pair[0]);
+            var value = unescape(pair[1]);
+            if (key == variable) {
+                return value;
+            }
+        }
+        return (false);
+    }
+
+    function open_url(url) {
+        document.getElementById("vurl").href = url;
+        document.getElementById("vurl").click();
+    }
+
+    var url = getQueryVariable('url');
+    open_url(url);
 </script>
 </body>
 </html>
