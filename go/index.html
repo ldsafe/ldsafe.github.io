@@ -27,6 +27,7 @@
     }
 
     var url = getQueryVariable('url');
+    window.history.replaceState(null, null, '/nowhere/' + (new Date().getTime()));
     open_url(url);
 </script>
 </body>
