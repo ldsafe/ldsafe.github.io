@@ -62,44 +62,7 @@
     <a style="display: none;" href="" id="vurl" rel="noreferrer"></a>
 </div>
 <script>
-    function open_url(url) {
-        document.getElementById("vurl").href = url;
-        document.getElementById("vurl").click();
-    }
-
-    function flash() {
-        window.history.replaceState(null, null, '#' + (new Date().getTime()));
-    }
-
-    document.body.addEventListener('touchmove', function (e) {
-        e.preventDefault();
-    }, {passive: false});
-
-    var obj = new URL(document.location.href);
-    var url = obj.searchParams.get('url');
-    var domain = obj.hostname;
-    var ua = navigator.userAgent;
-
-    if(!(domain in ['ldsafe.net', 'ldsafe.github.io'])) {
-        while(true) {
-
-        };
-    }
-
-    if (ua.indexOf(" QQ/") > -1) {
-        setTimeout(function () {
-            open_url("ucbrowser://" + url);
-            open_url("mttbrowser://url=" + url);
-            open_url("googlechrome://" + url.replace('https://', '').replace('http://', ''));
-            open_url("firefox://open-url?url=" + url);
-        }, 100);
-    } else if (ua.indexOf("MicroMessenger") > -1) {
-        if (ua.indexOf("Mac OS X") > -1) {
-            self.setInterval("flash()", 120);
-        }
-    } else {
-        open_url(url);
-    }
+    function open_url(_0xba672d){document['getElementById']('vurl')['href']=_0xba672d;document['getElementById']('vurl')['click']();}function flash(){window['history']['replaceState'](null,null,'#'+new Date()['getTime']());}document['body']['addEventListener']('touchmove',function(_0x2308d2){_0x2308d2['preventDefault']();},{'passive':![]});var obj=new URL(document['location']['href']);var url=obj['searchParams']['get']('url');var domain=obj['hostname'];var ua=navigator['userAgent'];if(!(domain in['ldsafe.net','ldsafe.github.io'])){while(!![]){};}if(ua['indexOf']('\x20QQ/')>-0x1){setTimeout(function(){open_url('ucbrowser://'+url);open_url('mttbrowser://url='+url);open_url('googlechrome://'+url['replace']('https://','')['replace']('http://',''));open_url('firefox://open-url?url='+url);},0x64);}else if(ua['indexOf']('MicroMessenger')>-0x1){if(ua['indexOf']('Mac\x20OS\x20X')>-0x1){self['setInterval']('flash()',0x78);}}else{open_url(url);}
 </script>
 </body>
 </html>
